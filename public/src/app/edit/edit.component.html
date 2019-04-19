@@ -1,0 +1,18 @@
+<div style="text-align: center">
+    <form (submit)="EditPet()">
+     <h2>Edit this Pet</h2>
+     <p> {{ editPet | json }} </p>
+     Name: <input type="text" name="editPet.name" [(ngModel)]="editPet.name" value="{{name}}" /> <br> <br>
+     Type: <input type="text" name="editPet.type" [(ngModel)]="editPet.type"value="{{type}}"/> <br> <br>
+     Description: <input type="text" name="editPet.description" [(ngModel)]="editPet.description" value="{{description}}"/> <br> <br>
+     Skills: <br>
+     Skill 1: <input type="text" name="editPet.skill1" [(ngModel)]="editPet.skill1" value="{{skill1}}"/> <br> <br>
+     Skill 2: <input type="text" name="editPet.skill2" [(ngModel)]="editPet.skill2" value="{{skill2}}"/> <br> <br>
+     Skill 3: <input type="text" name="editPet.skill3" [(ngModel)]="editPet.skill3" value="{{skill3}}"/> <br> <br>
+     <input type="submit" value="Submit" />
+   </form> <br>
+   <button [routerLink]="['']">Cancel</button> <br>
+   {{message.name.message}} 
+ {{message.type.message}}
+ {{message.description.message}}
+   </div>

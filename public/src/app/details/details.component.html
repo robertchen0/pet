@@ -1,0 +1,19 @@
+<div style="text-align: center">
+    <button [routerLink]="['']">Home</button> <br> <br>
+ <h2> Details about {{name}} </h2>
+  Pet type: {{type}}<br>
+  Description: {{description}}<br>
+  Skills: {{skill1}} {{skill2}} {{skill3}}<br>
+  Likes {{like}}<br>
+  
+  <div *ngIf="like == 0">
+  <button (click)="Like(petid)">Like</button> <br> <br>
+  </div>
+
+  <div *ngIf="like >= 1">
+  <button (click)="UnLike(petid)">UnLike</button> <br> <br>
+</div>
+
+
+  <button (click)="deletePet(petid)">Adopt this Pet</button>
+   </div>

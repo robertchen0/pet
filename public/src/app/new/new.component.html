@@ -1,0 +1,18 @@
+<div style="text-align: center">
+  <form (submit)="onSubmit()">
+   <h2>Know of a pet needing a home?</h2>
+   <p> {{ newPet | json }} </p>
+   Name: <input type="text" name="newPet.name" [(ngModel)]="newPet.name" /> <br> <br>
+   Type: <input type="text" name="newPet.type" [(ngModel)]="newPet.type" /> <br> <br>
+   Description: <input type="text" name="newPet.description" [(ngModel)]="newPet.description" /> <br> <br>
+   Skills: <br>
+   Skill 1: <input type="text" name="newPet.skill1" [(ngModel)]="newPet.skill1" /> <br> <br>
+   Skill 2: <input type="text" name="newPet.skill2" [(ngModel)]="newPet.skill2" /> <br> <br>
+   Skill 3: <input type="text" name="newPet.skill3" [(ngModel)]="newPet.skill3" /> <br> <br>
+   <input type="submit" value="Submit" />
+ </form> <br>
+ <button [routerLink]="['']">Cancel</button> <br>
+ {{message.name.message}} <br>
+ {{message.type.message}} <br>
+ {{message.description.message}} <br>
+ </div>
